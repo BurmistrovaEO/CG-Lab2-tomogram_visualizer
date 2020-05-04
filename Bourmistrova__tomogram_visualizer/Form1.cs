@@ -20,6 +20,7 @@ namespace Bourmistrova_tomogram_visualizer
         View view = new View();
         int currentLayer;
         bool loaded = false;
+                        
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -29,8 +30,10 @@ namespace Bourmistrova_tomogram_visualizer
                 string str = dialog.FileName;
                 bin.readBIN(str);
                 view.SetupView(glControl1.Width, glControl1.Height);
+                trackBar1.Maximum = Bin.Z-1;
                 loaded = true;
                 glControl1.Invalidate();
+
             }
         }
 
@@ -42,5 +45,14 @@ namespace Bourmistrova_tomogram_visualizer
                 glControl1.SwapBuffers();
             }
         }
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            currentLayer = trackBar1.Value;
+            glControl1.Invalidate();
+            textBox1.Text = currentLayer.ToString();
+            textBox1.Show();
+        }
+
+
     }
 }

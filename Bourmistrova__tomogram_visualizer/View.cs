@@ -42,6 +42,7 @@ namespace Bourmistrova_tomogram_visualizer
                 for (int y_coord = 0; y_coord < Bin.Y - 1; y_coord++)
                 {
                     short value;
+                    
                     //1 вершина
                     value = Bin.array[x_coord + y_coord * Bin.X
                                         + layerNumber * Bin.X * Bin.Y];
