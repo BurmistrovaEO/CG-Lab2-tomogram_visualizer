@@ -1,0 +1,17 @@
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.csprojAssemblyReference.cache
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova_tomogram_visualizer.Form1.resources
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.Properties.Resources.resources
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.csproj.GenerateResource.cache
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.csproj.CoreCompileInputs.cache
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\Bourmistrova__tomogram_visualizer.exe.config
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\Bourmistrova__tomogram_visualizer.exe
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\Bourmistrova__tomogram_visualizer.pdb
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\OpenTK.dll
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\OpenTK.pdb
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\OpenTK.xml
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\OpenTK.dll.config
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.csproj.CopyComplete
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.exe
+C:\Users\Kate\Desktop\Лабы КГ\Bourmistrova__tomogram_visualizer\Bourmistrova__tomogram_visualizer\obj\Debug\Bourmistrova__tomogram_visualizer.pdb
