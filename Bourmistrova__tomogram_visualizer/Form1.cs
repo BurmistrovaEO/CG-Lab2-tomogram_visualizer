@@ -20,7 +20,21 @@ namespace Bourmistrova_tomogram_visualizer
         View view = new View();
         int currentLayer;
         bool loaded = false;
-                        
+
+        int FrameCount;
+        DateTime NextFPSUpdate = DateTime.Now.AddSeconds(1);
+        void displayFPS()
+        {
+            if(DateTime.Now >= NextFPSUpdate)
+            {
+                this.Text = String.Format("CT Visualizer fps= ");//(0))", 
+                this.Text = String.Format(FrameCount.ToString());//(0))", 
+                NextFPSUpdate = DateTime.Now.AddSeconds(1);
+                FrameCount = 0;
+            }
+            FrameCount++;
+        }
+
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -36,7 +50,14 @@ namespace Bourmistrova_tomogram_visualizer
 
             }
         }
-
+        void Application_Idle(object sender, EventArgs e)
+        {
+            while(glControl1.IsIdle)
+            {
+                displayFPS();
+                glControl1.Invalidate();
+            }
+        }
         private void glControl1_Paint(object sender, PaintEventArgs e)
         {
             if (loaded)
@@ -53,6 +74,9 @@ namespace Bourmistrova_tomogram_visualizer
             textBox1.Show();
         }
 
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Application.Idle += Application_Idle;
+        }
     }
 }
