@@ -71,15 +71,20 @@ namespace Bourmistrova_tomogram_visualizer
                     view.Load2DTexture();
                     needReload = false;
                 }
-                view.DrawTexture();
+                if(radioButton2.Checked)
+                    view.DrawTexture();
+                if (radioButton1.Checked)
+                    view.DrawQuads(currentLayer);
                 glControl1.SwapBuffers();//
             }
         }
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             currentLayer = trackBar1.Value;
-            needReload = true;
-            //glControl1.Invalidate();
+            if(radioButton2.Checked)
+                needReload = true;
+            if(radioButton1.Checked)
+                glControl1.Invalidate();
             textBox1.Text = currentLayer.ToString();
             textBox1.Show();
         }
@@ -87,6 +92,16 @@ namespace Bourmistrova_tomogram_visualizer
         private void Form1_Load(object sender, EventArgs e)
         {
             Application.Idle += Application_Idle;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
