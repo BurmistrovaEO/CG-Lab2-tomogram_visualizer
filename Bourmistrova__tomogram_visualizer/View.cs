@@ -12,6 +12,9 @@ namespace Bourmistrova_tomogram_visualizer
 {
     class View
     {
+        public int min = 0;
+        public int wid = 1;
+
         Bitmap textureImage;
         int VBOtexture; //хранит номер текстуры в памяти видеокарты
         int clamp(int val, int min, int max)
@@ -84,8 +87,9 @@ namespace Bourmistrova_tomogram_visualizer
         }
         public Color TransferFunction(short value)
         {
-            int min = 0;
-            int max = 2000;
+            //int min = 0;
+            //int max = 2000;
+            int max = min + wid;
             int newVal = clamp((value - min) * 255 / (max - min), 0, 255);
             return Color.FromArgb(255, newVal, newVal, newVal);
         }

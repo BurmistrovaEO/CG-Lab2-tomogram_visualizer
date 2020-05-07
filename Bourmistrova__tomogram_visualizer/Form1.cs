@@ -46,6 +46,9 @@ namespace Bourmistrova_tomogram_visualizer
                 bin.readBIN(str);
                 view.SetupView(glControl1.Width, glControl1.Height);
                 trackBar1.Maximum = Bin.Z-1;
+                trackBar2.Maximum = 255;
+                trackBar3.Maximum = 2000;
+                trackBar3.Minimum = 1400;
                 loaded = true;
                 glControl1.Invalidate();
 
@@ -102,6 +105,18 @@ namespace Bourmistrova_tomogram_visualizer
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            view.min = trackBar2.Value;
+            needReload = true;
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            view.wid = trackBar3.Value;
+            needReload = true;
         }
     }
 }
