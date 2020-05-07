@@ -56,7 +56,7 @@ namespace Bourmistrova_tomogram_visualizer
             while(glControl1.IsIdle)
             {
                 displayFPS();
-                needReload = true;
+                //needReload = true;
                 glControl1.Invalidate();
             }
         }
@@ -69,6 +69,7 @@ namespace Bourmistrova_tomogram_visualizer
                 {
                     view.generateTextureImage(currentLayer);
                     view.Load2DTexture();
+                    needReload = false;
                 }
                 view.DrawTexture();
                 glControl1.SwapBuffers();//
@@ -77,7 +78,8 @@ namespace Bourmistrova_tomogram_visualizer
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             currentLayer = trackBar1.Value;
-            glControl1.Invalidate();
+            needReload = true;
+            //glControl1.Invalidate();
             textBox1.Text = currentLayer.ToString();
             textBox1.Show();
         }
