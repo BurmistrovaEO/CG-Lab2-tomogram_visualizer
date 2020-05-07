@@ -20,6 +20,7 @@ namespace Bourmistrova_tomogram_visualizer
         View view = new View();
         int currentLayer;
         bool loaded = false;
+        bool needReload = false;
 
         int FrameCount;
         DateTime NextFPSUpdate = DateTime.Now.AddSeconds(1);
@@ -27,7 +28,7 @@ namespace Bourmistrova_tomogram_visualizer
         {
             if(DateTime.Now >= NextFPSUpdate)
             {
-                this.Text = String.Format("CT Visualizer fps= ");//(0))", 
+                //this.Text = String.Format("CT Visualizer fps= ");//(0))", 
                 this.Text = String.Format(FrameCount.ToString());//(0))", 
                 NextFPSUpdate = DateTime.Now.AddSeconds(1);
                 FrameCount = 0;
@@ -55,6 +56,7 @@ namespace Bourmistrova_tomogram_visualizer
             while(glControl1.IsIdle)
             {
                 displayFPS();
+                needReload = true;
                 glControl1.Invalidate();
             }
         }
@@ -62,8 +64,14 @@ namespace Bourmistrova_tomogram_visualizer
         {
             if (loaded)
             {
-                view.DrawQuads(currentLayer);
-                glControl1.SwapBuffers();
+                //view.DrawQuads(currentLayer);
+                if(needReload == true)
+                {
+                    view.generateTextureImage(currentLayer);
+                    view.Load2DTexture();
+                }
+                view.DrawTexture();
+                glControl1.SwapBuffers();//
             }
         }
         private void trackBar1_Scroll(object sender, EventArgs e)
