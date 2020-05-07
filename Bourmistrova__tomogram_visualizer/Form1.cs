@@ -46,7 +46,7 @@ namespace Bourmistrova_tomogram_visualizer
                 bin.readBIN(str);
                 view.SetupView(glControl1.Width, glControl1.Height);
                 trackBar1.Maximum = Bin.Z-1;
-                trackBar2.Maximum = 255;
+                trackBar2.Maximum = 600;
                 trackBar3.Maximum = 2000;
                 trackBar3.Minimum = 1400;
                 loaded = true;
