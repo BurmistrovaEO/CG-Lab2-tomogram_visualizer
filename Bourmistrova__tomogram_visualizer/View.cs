@@ -96,12 +96,13 @@ namespace Bourmistrova_tomogram_visualizer
         public void DrawQuads(int layerNumber)
         {
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-            GL.Begin(PrimitiveType.Quads);
             for (int x_coord = 0; x_coord < Bin.X - 1; x_coord++)
+            {
+                GL.Begin(PrimitiveType.QuadStrip);
                 for (int y_coord = 0; y_coord < Bin.Y - 1; y_coord++)
                 {
                     short value;
-                    
+
                     //1 вершина
                     value = Bin.array[x_coord + y_coord * Bin.X
                                         + layerNumber * Bin.X * Bin.Y];
@@ -111,19 +112,20 @@ namespace Bourmistrova_tomogram_visualizer
                     value = Bin.array[x_coord + (y_coord + 1) * Bin.X
                                         + layerNumber * Bin.X * Bin.Y];
                     GL.Color3(TransferFunction(value));
-                    GL.Vertex2(x_coord, y_coord + 1);
+                    GL.Vertex2(x_coord + 1, y_coord);
                     //3 вершина
                     value = Bin.array[x_coord + 1 + (y_coord + 1) * Bin.X
                                         + layerNumber * Bin.X * Bin.Y];
                     GL.Color3(TransferFunction(value));
-                    GL.Vertex2(x_coord + 1, y_coord + 1);
+                    GL.Vertex2(x_coord, y_coord + 1);
                     //4 вершина
                     value = Bin.array[x_coord + 1 + y_coord * Bin.X
                                         + layerNumber * Bin.X * Bin.Y];
                     GL.Color3(TransferFunction(value));
-                    GL.Vertex2(x_coord + 1, y_coord);
+                    GL.Vertex2(x_coord + 1, y_coord + 1);
                 }
-            GL.End();
+                GL.End();
+            }
         }
 
     }
